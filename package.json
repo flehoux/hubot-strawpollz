@@ -1,39 +1,32 @@
 {
   "name": "hubot-strawpollz",
   "description": "Adds strawpoll functionality to hubot",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "author": "François Lehoux <f.lehoux2@gmail.com>",
   "license": "MIT",
-
   "keywords": [
     "hubot",
     "hubot-strawpoll",
     "hubot-strawpollz",
     "strawpoll"
   ],
-
   "repository": {
     "type": "git",
     "url": "https://github.com/flehoux/hubot-strawpollz.git"
   },
-
   "bugs": {
     "url": "https://github.com/flehoux/hubot-strawpollz/issues"
   },
-
   "dependencies": {
     "coffee-script": "~1.6"
   },
-
   "devDependencies": {
     "mocha": "*",
     "chai": "*",
     "sinon-chai": "*",
     "sinon": "*"
   },
-
   "main": "index.coffee",
-
   "scripts": {
     "test": "script/test"
   }
