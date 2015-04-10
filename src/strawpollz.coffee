@@ -1,22 +1,26 @@
 # Description:
-#   Say Hi to Hubot.
+#   Adds Strawpoll functionality to hubot
 #
 # Dependencies:
-#   None
+#   'querystring'
 #
 # Configuration:
 #   None
 #
 # Commands:
-#   hubot hello - "hello!"
-#   hubot orly - "yarly"
+#   hubot strawpoll -t "<title>" <option1>/<option2>/<option3>/<...> - Create a strapoll with <title> and its <options>
+
 #
 # Author:
-#   tombell
+#   flehoux
+
+STRAWPOLL_TITLE_SPLIT_REGEX = /strawpoll -t "(.*?)" (.+)/i
+STRAWPOLL_SPLIT_REGEX = /strawpoll (.+)/i
+STRAWPOLL_OPTIONS_REGEX = /([^\/]+)(?:\/)*/i
 
 module.exports = (robot) ->
-  robot.respond /hello/, (msg) ->
-    msg.reply "hello!"
+	robot.respond STRAWPOLL_TITLE_SPLIT_REGEX, (msg) ->
+    	msg.reply msg.matches[1]
 
-  robot.hear /orly/, ->
-    msg.send "yarly"
+	robot.respond STRAWPOLL_SPLIT_REGEX, (msg) ->
+    	msg.reply msg.matches[1]
