@@ -1,7 +1,7 @@
 {
   "name": "hubot-strawpollz",
   "description": "Adds strawpoll functionality to hubot",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "François Lehoux <f.lehoux2@gmail.com>",
   "license": "MIT",
   "keywords": [
